@@ -8,3 +8,7 @@ RUN apt-get update -qq \
         iputils-ping \
         net-tools \
  && rm -rf /var/lib/apt/lists/*
+COPY start-ovs.sh /usr/local/bin/start-ovs.sh
+RUN chmod +x /usr/local/bin/start-ovs.sh
+
+CMD ["/usr/local/bin/start-ovs.sh"]
