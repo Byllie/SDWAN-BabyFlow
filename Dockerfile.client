@@ -9,5 +9,5 @@ RUN apt-get update -qq \
  && rm -rf /var/lib/apt/lists/*
 
 
-CMD [ "sleep 500000" ]
+CMD [ "sleep", "1d" ]
 
