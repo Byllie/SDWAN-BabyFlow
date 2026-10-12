@@ -1,3 +1,5 @@
+#!/bin/bash
+
 set -e
 
 DB=/etc/openvswitch/conf.db

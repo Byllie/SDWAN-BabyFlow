@@ -1,0 +1,13 @@
+FROM debian:latest
+
+RUN apt-get update -qq \
+ && apt-get install -y -qq --no-install-recommends \
+        iproute2 \
+        iperf3 \
+        iputils-ping \
+        net-tools \
+ && rm -rf /var/lib/apt/lists/*
+
+
+CMD [ "sleep 500000" ]
+

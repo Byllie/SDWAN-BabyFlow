@@ -11,7 +11,16 @@ topology:
       kind: linux
     C:
       kind: linux
-
+    PCA:
+      kind: linux
+      image: sdwan-client:latest
+    PCB:
+      kind: linux
+      image: sdwan-client:latest
   links:
-    - endpoints: ["A:eth1", "B:eth1"]
-    - endpoints: ["B:eth2", "C:eth1"]
+    - endpoints: ["A:eth3", "B:eth3"]
+    - endpoints: ["B:eth2", "C:eth2"]
+    - endpoints: ["PCA:eth1", "A:eth1"]
+    - endpoints: ["PCA:eth2", "B:eth1"]
+    - endpoints: ["PCA:eth3", "C:eth1"]
+    - endpoints: ["PCB:eth1", "C:eth3"]
