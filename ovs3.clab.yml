@@ -1,0 +1,17 @@
+name: ovs3
+
+topology:
+  kinds:
+    linux:
+      image: sdwan-ovs:latest
+  nodes:
+    A:
+      kind: linux
+    B:
+      kind: linux
+    C:
+      kind: linux
+
+  links:
+    - endpoints: ["A:eth1", "B:eth1"]
+    - endpoints: ["B:eth2", "C:eth1"]
